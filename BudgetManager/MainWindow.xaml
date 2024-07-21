@@ -1,0 +1,41 @@
+﻿<Window x:Class="BudgetManager.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Budget Manager" Height="450" Width="800">
+    <Grid>
+        <TabControl>
+            <TabItem Header="Login">
+                <StackPanel Margin="10">
+                    <TextBox x:Name="Username" Style="{StaticResource PlaceholderTextBox}" Margin="0,0,0,10"/>
+                    <PasswordBox x:Name="Password" Margin="0,0,0,10"/>
+                    <Button Content="Login" Click="Login_Click"/>
+                    <Button Content="Register" Click="Register_Click"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Categories">
+                <StackPanel Margin="10">
+                    <TextBox x:Name="CategoryName" Style="{StaticResource PlaceholderTextBox}" Margin="0,0,0,10"/>
+                    <Button Content="Add Category" Click="AddCategory_Click"/>
+                    <ListBox x:Name="Categories" Margin="0,10,0,0"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Transactions">
+                <StackPanel Margin="10">
+                    <TextBlock Text="Add Expense or Income" FontSize="16" Margin="0,0,0,10"/>
+                    <ComboBox x:Name="CategorySelector" Margin="0,0,0,10"/>
+                    <TextBox x:Name="Description" Style="{StaticResource PlaceholderTextBox}" Margin="0,0,0,10"/>
+                    <TextBox x:Name="Amount" Style="{StaticResource PlaceholderTextBox}" Margin="0,0,0,10"/>
+                    <Button Content="Add" Click="AddTransaction_Click"/>
+                    <ListBox x:Name="Transactions" Margin="0,10,0,0"/>
+                    <TextBlock x:Name="Total" FontSize="16" Margin="0,10,0,0"/>
+                </StackPanel>
+            </TabItem>
+            <TabItem Header="Reports">
+                <StackPanel Margin="10">
+                    <Button Content="Generate Report" Click="GenerateReport_Click"/>
+                    <Image x:Name="ReportImage" Height="200" Margin="0,10,0,0"/>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+    </Grid>
+</Window>

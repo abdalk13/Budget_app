@@ -1,0 +1,22 @@
+﻿<Application x:Class="BudgetManager.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="PlaceholderTextBox" TargetType="TextBox">
+            <Setter Property="Foreground" Value="Gray"/>
+            <Setter Property="Text" Value="Enter text here..."/>
+            <Style.Triggers>
+                <Trigger Property="IsKeyboardFocused" Value="True">
+                    <Setter Property="Foreground" Value="Black"/>
+                    <Setter Property="Text" Value=""/>
+                </Trigger>
+                <Trigger Property="IsKeyboardFocused" Value="False">
+                    <Setter Property="Foreground" Value="Gray"/>
+                    <Setter Property="Text" Value="Enter text here..."/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Application.Resources>
+</Application>
